@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { SellOrder as SellOrderComponent } from './index'
 import { Paper } from '@mui/material'
+import type { TransactionInfoType } from '@safe-global/safe-gateway-typescript-sdk'
 
 const meta = {
   component: SellOrderComponent,
@@ -26,7 +27,7 @@ type Story = StoryObj<typeof meta>
 export const SellOrder: Story = {
   args: {
     order: {
-      type: 'SwapOrder',
+      type: 'SwapOrder' as TransactionInfoType.SWAP_ORDER,
       humanDescription: null,
       richDecodedInfo: null,
       orderUid:
@@ -47,7 +48,6 @@ export const SellOrder: Story = {
       filledPercentage: '100.00',
       explorerUrl:
         'https://explorer.cow.fi/orders/0xdfbc181c3cea514808cf74363a1914a9988881db2d125b026c3e5feffb359f9e7a9af6ef9197041a5841e84cb27873bebd3486e26613f9d1',
-      feeLabel: '0.06804026182145945 COW',
       executionPriceLabel: '1 COW = 0.14508041726505666 USDC',
       surplusLabel: '0.22324174807285857 USDC',
     },
