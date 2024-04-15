@@ -44,7 +44,7 @@ export const SwapOrderHeader = ({
   )
 }
 
-const SellOrder = ({ order }: { order: SwapOrderType }) => {
+export const SellOrder = ({ order }: { order: SwapOrderType }) => {
   const { buyToken, sellToken, orderUid, expiresTimestamp, status, executionPriceLabel, surplusLabel } = order
   return (
     <DataTable
